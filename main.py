@@ -11,7 +11,7 @@ screen_height = 600
 gameWindow = pygame.display.set_mode((screen_width, screen_height))
 
 # Game Title
-pygame.display.set_caption("SnakesWithHarry")
+pygame.display.set_caption("Snakes Game")
 pygame.display.update()
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, 55)
@@ -87,7 +87,7 @@ def gameloop():
             snake_x += velocity_x
             snake_y += velocity_y
 
-            if abs(snake_x - food_x)<8 and abs(snake_y - food_y)<8:
+            if  (snake_x - food_x)<8 and abs(snake_y - food_y)<8:
                 score +=1
                 food_x = random.randint(20, screen_width / 2)
                 food_y = random.randint(20, screen_height / 2)
